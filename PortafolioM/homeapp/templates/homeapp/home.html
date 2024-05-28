@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="glass p-4" style="position: relative; width: 100%; height: auto;">
+        <div class="row align-items-center">
+            <div class="col-md-6 order-md-1">
+                <h1 class="display-1">Hello, World!</h1>
+                <h2 class="display-4">My name is</h2>
+                <h3 class="h1">Tu Nombre</h3>
+            </div>
+            <div class="col-md-6 order-md-2">
+                <img src="{% static 'img/perfil.png' %}" alt="Perfil" class="img-fluid rounded-circle shadow-lg" style="width: 50%; max-width: 150px;">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+footer {
+    background: rgba(255, 255, 255, 0.43);
+    border-top: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.9px);
+    -webkit-backdrop-filter: blur(6.9px);
+    border-radius: 16px;
+    padding: 20px;
+    color: white;
+    width: 100%;
+    flex-shrink: 0; /* Asegura que el footer no se encoja */
+    text-align: center;
+}
+
+.footer-section:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+    }
+}

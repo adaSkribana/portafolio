@@ -1,0 +1,33 @@
+<!-- Botón para abrir el sidebar -->
+<button class="btn btn-primary menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">Menu</button>
+
+<!-- Sidebar offcanvas -->
+<div class="offcanvas offcanvas-start glass-sidebar" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="staticBackdropLabel">Mi Portafolio</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="list-unstyled components ">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'blog_list' %}">Blog</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+
+        <ul class="nav justify-content-end">
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">
+                    <button type="button" class="btn btn-outline-light">Logout</button>
+                </a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">
+                    <button type="button" class="btn btn-outline-light">Login</button>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
